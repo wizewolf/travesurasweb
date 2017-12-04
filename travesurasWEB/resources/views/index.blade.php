@@ -73,7 +73,7 @@
                                             <li><a href="#nuestrotrabajo" data-scroll-nav='3'>Nuestro trabajos</a></li>
                                             <li><a href="#combos" data-scroll-nav='4'>Combos</a></li>
                                     		<li><a href="#contactos" data-scroll-nav='5'>Contactos</a></li>
-                                    		<li><a href="{{ route('login') }}">Login</a></li>
+                                    		<li><a href="/login1">Login</a></li>
                       						<li><a href="{{ route('register') }}">Register</a></li>
 
                                         </ul>

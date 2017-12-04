@@ -14,5 +14,5 @@
 Route::get('/',['as'=>'travesurashome','uses'=>'TravesurasController@main']);
 
 Auth::routes();
-Route::get('login1',['as'=>'loginTravesuras','uses'=>'TravesurasController@login']);
+Route::get('/login1',['as'=>'loginTravesuras','uses'=>'TravesurasController@login']);
 Route::get('/home', 'HomeController@index')->name('home');

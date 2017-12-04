@@ -26,7 +26,7 @@
             <div class="collapse navbar-collapse justify-content-end" id="navigation" data-nav-image="{{ asset('') }}img/blurred-image-1.jpg">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="../index.html">Volver</a>
+                        <a class="nav-link" href="/">Volver</a>
                     </li>
                 </ul>
             </div>
