@@ -1,0 +1,39 @@
+.main_menu_bg.navbar-fixed-top.menu-scroll {
+    margin-top: 0px;
+    background: #bde3f9;
+}
+section.cuerpo {
+    background: #d4e7ff;
+}
+h2{
+    font-family: 'Boogaloo', cursive;
+}
+a.btn{
+    font-family: 'Boogaloo', cursive;
+    font-size: 1.5em;
+}
+p.info{
+    font-family: 'Bubblegum Sans', cursive;
+}
+p.esp{
+    /*font-family: 'Capriola', sans-serif;*/
+    font-family: 'Boogaloo';
+    line-height: 1.2em; font-size: 2em;
+}
+h3.titulo{
+    /*font-family: 'Capriola', sans-serif;*/
+    font-family: 'Lemon', cursive;
+}
+.borde {
+    color: #000;
+
+    text-shadow:
+            -1px -1px 0 #fff,
+            1px -1px 0 #fff,
+            -1px 1px 0 #fff,
+            1px 1px 0 #fff;
+}
+p label {
+    font-size: 18px;
+    font-family: 'big_johnregular';
+}
