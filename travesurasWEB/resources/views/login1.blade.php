@@ -17,6 +17,7 @@
     <!-- CSS Just for demo purpose, don't include it in your project -->
     <link href="{{ asset('') }}css/demo.css" rel="stylesheet" />
     <link href="{{ asset('') }}css/travesuras.css" rel="stylesheet" />
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 </head>
 
 <body class="login-page sidebar-collapse">
@@ -38,7 +39,8 @@
         <div class="container">
             <div class="col-md-4 content-center">
                 <div class="card card-login card-plain">
-                    <form class="form" method="" action="">
+                    <form class="form" method="post" action="{{ route('login_store') }}">
+                        {{ csrf_field() }}
                         <div class="header header-primary text-center">
                             <div class="logo-container">
                                 <img src="{{ asset('') }}img/travesuras logo.png" alt="">
@@ -61,13 +63,12 @@
                         <div class="footer text-center">
                             <a class="btn btn-primary btn-round btn-lg btn-block login">Iniciar Sesion </a>
                         </div>
-                        <div class="pull-left">
-                            <h6>
-                                <a class="link">Crear Cuenta</a>
-                            </h6>
-                        </div>
-                        
                     </form>
+                    <div class="pull-left">
+                        <h6>
+                            <a class="link crearCuenta">Crear Cuenta</a>
+                        </h6>
+                    </div>
                 </div>
             </div>
         </div>
