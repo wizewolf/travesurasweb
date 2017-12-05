@@ -42,7 +42,6 @@
     </head>
     <body>
         <!--[if lt IE 8]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 		<div class='preloader'><div class='loaded'>&nbsp;</div></div>
         <!--Home page style-->
@@ -73,8 +72,8 @@
                                             <li><a href="#nuestrotrabajo" data-scroll-nav='3'>Nuestro trabajos</a></li>
                                             <li><a href="#combos" data-scroll-nav='4'>Combos</a></li>
                                     		<li><a href="#contactos" data-scroll-nav='5'>Contactos</a></li>
-                                    		<li><a href="/login1">Login</a></li>
-                      						<li><a href="{{ route('register') }}">Register</a></li>
+                                    		<li><a href="/login">Ingresar</a></li>
+                      						<li><a href="/register">Registrar</a></li>
 
                                         </ul>
                                     </div>
