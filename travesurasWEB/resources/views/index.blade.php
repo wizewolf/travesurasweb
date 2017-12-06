@@ -72,8 +72,12 @@
                                             <li><a href="#nuestrotrabajo" data-scroll-nav='3'>Nuestro trabajos</a></li>
                                             <li><a href="#combos" data-scroll-nav='4'>Combos</a></li>
                                     		<li><a href="#contactos" data-scroll-nav='5'>Contactos</a></li>
-                                    		<li><a href="/login">Ingresar</a></li>
-                      						<li><a href="/register">Registrar</a></li>
+											@if(\Illuminate\Support\Facades\Auth::guest())
+												<li><a href="/login">Ingresar</a></li>
+												<li><a href="/register">Registrar</a></li>
+											@else
+												<li><a href="/cerrar-sesion">Salir</a></li>
+											@endif
 
                                         </ul>
                                     </div>

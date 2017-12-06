@@ -38,7 +38,7 @@ class ApiAuthController extends Controller{
             return redirect()->route('login1')->withErrors('No se encontro el usuario');
         }
 
-        return redirect()->route('inbox');
+        return redirect()->route('travesurashome');
     }
 
     public function getRegister(){
@@ -75,7 +75,7 @@ class ApiAuthController extends Controller{
         if(Auth::check())
             Auth::logout();
 
-        return redirect()->route('login');
+        return redirect()->route('travesurashome');
     }
 
     public function getlogin() {

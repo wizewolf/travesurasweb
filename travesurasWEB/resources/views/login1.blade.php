@@ -39,7 +39,7 @@
         <div class="container">
             <div class="col-md-4 content-center">
                 <div class="card card-login card-plain">
-                    <form class="form" method="post" action="{{ route('login_store') }}">
+                    <form class="form-horizontal" method="POST" action="{{ route('login_store') }}">
                         {{ csrf_field() }}
                         <div class="header header-primary text-center">
                             <div class="logo-container">
@@ -51,17 +51,17 @@
                                 <span class="input-group-addon">
                                     <i class="now-ui-icons ui-1_email-85"></i>
                                 </span>
-                                <input type="text" class="form-control mail" placeholder="Correo...">
+                                <input name="email" type="text" class="form-control mail" placeholder="Correo...">
                             </div>
                             <div class="input-group form-group-no-border input-lg">
                                 <span class="input-group-addon">
                                     <i class="now-ui-icons ui-1_lock-circle-open"></i>
                                 </span>
-                                <input type="password" placeholder="Contraseña..." class="form-control password" />
+                                <input name="password" type="password" placeholder="Contraseña..." class="form-control password" />
                             </div>
                         </div>
                         <div class="footer text-center">
-                            <a class="btn btn-primary btn-round btn-lg btn-block login">Iniciar Sesion </a>
+                            <button type="submit" class="btn btn-primary btn-round btn-lg btn-block">Ingresar</button>
                         </div>
                     </form>
                     <div class="pull-left">

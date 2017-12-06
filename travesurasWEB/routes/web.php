@@ -26,3 +26,5 @@ Route::get('/',['as'=>'travesurashome','uses'=>'TravesurasController@main']);
 Route::get('/login1',['as'=>'loginTravesuras','uses'=>'TravesurasController@login']);
 Route::get('/home', 'HomeController@index')->name('home');
 
+//gestion
+Route::get('/gestionIndex', 'GestionIndex@index')->name('gestionIndex');

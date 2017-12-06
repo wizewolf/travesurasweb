@@ -16,9 +16,9 @@ p.info{
     font-family: 'Bubblegum Sans', cursive;
 }
 p.esp{
-    /*font-family: 'Capriola', sans-serif;*/
     font-family: 'Boogaloo';
     line-height: 1.2em; font-size: 2em;
+    color: #565656;
 }
 h3.titulo{
     /*font-family: 'Capriola', sans-serif;*/
@@ -36,4 +36,14 @@ h3.titulo{
 p label {
     font-size: 18px;
     font-family: 'big_johnregular';
+}
+.row{
+    margin-left:0px;
+    margin-right:0px;
+}
+.marginnone{
+    margin:0;
+}
+#paddingnone{
+    padding: 0;
 }
