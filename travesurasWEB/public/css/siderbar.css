@@ -5,8 +5,7 @@
 }
 
 #sidebar-wrapper {
-    margin-left: -17%;
-    left: 70px;
+    left: -11%;
     width: 15%;
     background: #222;
     position: fixed;
@@ -33,7 +32,7 @@
     padding-left: 16%;
 }
 #wrapper.active #sidebar-wrapper {
-    left: 17%;
+    left: 0;
 }
 
 #page-content-wrapper {

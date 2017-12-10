@@ -1,132 +1,347 @@
 <!DOCTYPE html>
-<html lang="{{ app()->getLocale() }}">
+<html>
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Travesuras</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <!-- Bootstrap 3.3.7 -->
+    <link rel="stylesheet" href="{{ asset('') }}bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="{{ asset('') }}bower_components/font-awesome/css/font-awesome.min.css">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="{{ asset('') }}bower_components/Ionicons/css/ionicons.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="{{ asset('') }}dist/css/AdminLTE.min.css">
+    <link rel="stylesheet" href="{{ asset('') }}css/paraContent.css">
+    <!-- AdminLTE Skins. Choose a skin from the css/skins
+         folder instead of downloading all of them to reduce the load. -->
+    <link rel="stylesheet" href="{{ asset('') }}dist/css/skins/_all-skins.min.css">
+    <!-- Morris chart -->
+    <link rel="stylesheet" href="{{ asset('') }}bower_components/morris.js/morris.css">
+    <!-- jvectormap -->
+    <link rel="stylesheet" href="{{ asset('') }}bower_components/jvectormap/jquery-jvectormap.css">
+    <!-- Date Picker -->
+    <link rel="stylesheet" href="{{ asset('') }}bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css">
+    <!-- Daterange picker -->
+    <link rel="stylesheet" href="{{ asset('') }}bower_components/bootstrap-daterangepicker/daterangepicker.css">
+    <!-- bootstrap wysihtml5 - text editor -->
+    <link rel="stylesheet" href="{{ asset('') }}plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
 
-    <!-- CSRF Token -->
-    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
 
-    <title>{{ config('app.name', 'Travesuras Infantiles') }}</title>
-
-    <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/travesuras.css') }}" rel="stylesheet">
-    <!--<link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,200,300,600,700' rel='stylesheet' type='text/css'>-->
-    <link rel="stylesheet" href="{{ asset('') }}css/fonticons.css">
-    <link rel="stylesheet" href="{{ asset('') }}fonts/stylesheet.css">
-    <link rel="stylesheet" href="{{ asset('') }}css/font-awesome.min.css">
-    <link rel="stylesheet" href="{{ asset('') }}css/bootstrap.min.css">
-<!--        <link rel="stylesheet" href="{{ asset('') }}css/bootstrap-theme.min.css">-->
-
-
-    <!--For Plugins external css-->
-    <link rel="stylesheet" href="{{ asset('') }}css/plugins.css" />
-
-    <!--Theme custom css -->
-    <link rel="stylesheet" href="{{ asset('') }}css/style.css">
-
-    <!--Theme Responsive css-->
-    <link rel="stylesheet" href="{{ asset('') }}css/responsive.css" />
-    <link rel="stylesheet" href="{{ asset('') }}css/siderbar.css" />
-
-    <script src="{{ asset('') }}js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
-    <script src="jquery-1.10.2.min.js" type="text/javascript"></script>
-    <script>$(function() { $.scrollIt(); });</script>
-    <script src="scrollIt.js" type="text/javascript"></script>
-    {{--impor font de google--}}
-    <link href="https://fonts.googleapis.com/css?family=Boogaloo" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Bubblegum+Sans" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Capriola" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Lemon" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
-    <!-- CSS Files -->
-    <link href="{{ asset('') }}css/bootstrap1.min.css" rel="stylesheet" />
-    <link href="{{ asset('') }}css/now-ui-kit.css?v=1.1.0" rel="stylesheet" />
-    <!-- CSS Just for demo purpose, don't include it in your project -->
-    <link href="{{ asset('') }}css/demo.css" rel="stylesheet" />
-    <link href="{{ asset('') }}css/travesuras.css" rel="stylesheet" />
+    <!-- Google Font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
 </head>
-<body>
-<div id="app">
-    <nav class="navbar navbar-expand-lg bg-info paddingnone marginnone">
-        <div class="container">
-            <div class="navbar-translate">
-                <a class="navbar-brand" href="#pablo">
-                    Navbar
-                </a>
-                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-bar bar1"></span>
-                    <span class="navbar-toggler-bar bar2"></span>
-                    <span class="navbar-toggler-bar bar3"></span>
-                </button>
+<body class="hold-transition skin-blue sidebar-mini">
+<div class="wrapper">
 
+    <header class="main-header">
+        <!-- Logo -->
+        <a href="index2.html" class="logo">
+            <!-- mini logo for sidebar mini 50x50 pixels -->
+            <span class="logo-mini"><b>T</b>b</span>
+            <!-- logo for regular state and mobile devices -->
+            <span class="logo-lg"><b>Trabesuras </b>infantiles</span>
+        </a>
+        <!-- Header Navbar: style can be found in header.less -->
+        <nav class="navbar navbar-static-top">
+            <!-- Sidebar toggle button-->
+            <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+                <span class="sr-only">Toggle navigation</span>
+            </a>
 
-            </div>
-
-            <div class="collapse navbar-collapse justify-content-end" id="navigation">
-                <ul class="navbar-nav">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#pablo">
-                            Home
+            <div class="navbar-custom-menu">
+                <ul class="nav navbar-nav">
+                  <!-- User Account: style can be found in dropdown.less -->
+                    <li class="dropdown user user-menu">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                           <span class="hidden-xs"> {{\Illuminate\Support\Facades\Auth::user()->user_name}}</span>
                         </a>
+                        <ul class="dropdown-menu">
+                            <!-- User image -->
+                            <li class="user-header">
+                                <p>
+                                    {{\Illuminate\Support\Facades\Auth::user()->user_name}}
+                                </p>
+                            </li>
+                            <li class="user-footer">
+                                <div class="pull-right">
+                                    <a href="cerrar-sesion" class="btn btn-default btn-flat">Sign out</a>
+                                </div>
+                            </li>
+                        </ul>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#pablo">Link</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link disabled" href="#pablo">Disabled</a>
-                    </li>
+                    <!-- Control Sidebar Toggle Button -->
                 </ul>
             </div>
-        </div>
-    </nav>
-    <div id="wrapper" class="active">
-
-        <!-- Sidebar -->
-        <!-- Sidebar -->
-        <div id="sidebar-wrapper">
-            <ul id="sidebar_menu" class="sidebar-nav">
-                <li class="sidebar-brand"><a id="menu-toggle" href="#">Menu<span class="glyphicon glyphicon-align-justify"></span></a></li>
+        </nav>
+    </header>
+    <!-- Left side column. contains the logo and sidebar -->
+    <aside class="main-sidebar">
+        <!-- sidebar: style can be found in sidebar.less -->
+        <section class="sidebar">
+            <!-- sidebar menu: : style can be found in sidebar.less -->
+            <ul class="sidebar-menu" data-widget="tree">
+                <li class="header">Panel</li>
+                <li><a href="https://adminlte.io/docs"><i class="fa fa-book"></i> <span>Subir Foto</span></a></li>
+                <li><a href="https://adminlte.io/docs"><i class="fa fa-book"></i> <span>Descargar Foto</span></a></li>
             </ul>
-            <ul class="sidebar-nav" id="sidebar">
-                <li><a>Reservar fecha<span class="siderbaricon glyphicon glyphicon-link"></span></a></li>
-                <li><a>Descargar Foto<span class="siderbaricon glyphicon glyphicon-link"></span></a></li>
-            </ul>
+        </section>
+        <!-- /.sidebar -->
+    </aside>
+    @yield('content')
+    <footer class="main-footer">
+        <div class="pull-right hidden-xs">
+            <b>Version</b> 1.0
         </div>
+        <strong>Copyright &copy; 2017 <a href="#">MPStudio</a>.</strong> Todos los derechos reservados.
+    </footer>
 
-        <!-- Page content -->
-        @yield('content')
+    <!-- Control Sidebar -->
+    <aside class="control-sidebar control-sidebar-dark">
+        <!-- Create the tabs -->
+        <ul class="nav nav-tabs nav-justified control-sidebar-tabs">
+            <li><a href="#control-sidebar-home-tab" data-toggle="tab"><i class="fa fa-home"></i></a></li>
+            <li><a href="#control-sidebar-settings-tab" data-toggle="tab"><i class="fa fa-gears"></i></a></li>
+        </ul>
+        <!-- Tab panes -->
+        <div class="tab-content">
+            <!-- Home tab content -->
+            <div class="tab-pane" id="control-sidebar-home-tab">
+                <h3 class="control-sidebar-heading">Recent Activity</h3>
+                <ul class="control-sidebar-menu">
+                    <li>
+                        <a href="javascript:void(0)">
+                            <i class="menu-icon fa fa-birthday-cake bg-red"></i>
 
-    </div>
+                            <div class="menu-info">
+                                <h4 class="control-sidebar-subheading">Langdon's Birthday</h4>
+
+                                <p>Will be 23 on April 24th</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)">
+                            <i class="menu-icon fa fa-user bg-yellow"></i>
+
+                            <div class="menu-info">
+                                <h4 class="control-sidebar-subheading">Frodo Updated His Profile</h4>
+
+                                <p>New phone +1(800)555-1234</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)">
+                            <i class="menu-icon fa fa-envelope-o bg-light-blue"></i>
+
+                            <div class="menu-info">
+                                <h4 class="control-sidebar-subheading">Nora Joined Mailing List</h4>
+
+                                <p>nora@example.com</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)">
+                            <i class="menu-icon fa fa-file-code-o bg-green"></i>
+
+                            <div class="menu-info">
+                                <h4 class="control-sidebar-subheading">Cron Job 254 Executed</h4>
+
+                                <p>Execution time 5 seconds</p>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+                <!-- /.control-sidebar-menu -->
+
+                <h3 class="control-sidebar-heading">Tasks Progress</h3>
+                <ul class="control-sidebar-menu">
+                    <li>
+                        <a href="javascript:void(0)">
+                            <h4 class="control-sidebar-subheading">
+                                Custom Template Design
+                                <span class="label label-danger pull-right">70%</span>
+                            </h4>
+
+                            <div class="progress progress-xxs">
+                                <div class="progress-bar progress-bar-danger" style="width: 70%"></div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)">
+                            <h4 class="control-sidebar-subheading">
+                                Update Resume
+                                <span class="label label-success pull-right">95%</span>
+                            </h4>
+
+                            <div class="progress progress-xxs">
+                                <div class="progress-bar progress-bar-success" style="width: 95%"></div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)">
+                            <h4 class="control-sidebar-subheading">
+                                Laravel Integration
+                                <span class="label label-warning pull-right">50%</span>
+                            </h4>
+
+                            <div class="progress progress-xxs">
+                                <div class="progress-bar progress-bar-warning" style="width: 50%"></div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)">
+                            <h4 class="control-sidebar-subheading">
+                                Back End Framework
+                                <span class="label label-primary pull-right">68%</span>
+                            </h4>
+
+                            <div class="progress progress-xxs">
+                                <div class="progress-bar progress-bar-primary" style="width: 68%"></div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+                <!-- /.control-sidebar-menu -->
+
+            </div>
+            <!-- /.tab-pane -->
+            <!-- Stats tab content -->
+            <div class="tab-pane" id="control-sidebar-stats-tab">Stats Tab Content</div>
+            <!-- /.tab-pane -->
+            <!-- Settings tab content -->
+            <div class="tab-pane" id="control-sidebar-settings-tab">
+                <form method="post">
+                    <h3 class="control-sidebar-heading">General Settings</h3>
+
+                    <div class="form-group">
+                        <label class="control-sidebar-subheading">
+                            Report panel usage
+                            <input type="checkbox" class="pull-right" checked>
+                        </label>
+
+                        <p>
+                            Some information about this general settings option
+                        </p>
+                    </div>
+                    <!-- /.form-group -->
+
+                    <div class="form-group">
+                        <label class="control-sidebar-subheading">
+                            Allow mail redirect
+                            <input type="checkbox" class="pull-right" checked>
+                        </label>
+
+                        <p>
+                            Other sets of options are available
+                        </p>
+                    </div>
+                    <!-- /.form-group -->
+
+                    <div class="form-group">
+                        <label class="control-sidebar-subheading">
+                            Expose author name in posts
+                            <input type="checkbox" class="pull-right" checked>
+                        </label>
+
+                        <p>
+                            Allow the user to show his name in blog posts
+                        </p>
+                    </div>
+                    <!-- /.form-group -->
+
+                    <h3 class="control-sidebar-heading">Chat Settings</h3>
+
+                    <div class="form-group">
+                        <label class="control-sidebar-subheading">
+                            Show me as online
+                            <input type="checkbox" class="pull-right" checked>
+                        </label>
+                    </div>
+                    <!-- /.form-group -->
+
+                    <div class="form-group">
+                        <label class="control-sidebar-subheading">
+                            Turn off notifications
+                            <input type="checkbox" class="pull-right">
+                        </label>
+                    </div>
+                    <!-- /.form-group -->
+
+                    <div class="form-group">
+                        <label class="control-sidebar-subheading">
+                            Delete chat history
+                            <a href="javascript:void(0)" class="text-red pull-right"><i class="fa fa-trash-o"></i></a>
+                        </label>
+                    </div>
+                    <!-- /.form-group -->
+                </form>
+            </div>
+            <!-- /.tab-pane -->
+        </div>
+    </aside>
+    <!-- /.control-sidebar -->
+    <!-- Add the sidebar's background. This div must be placed
+         immediately after the control sidebar -->
+    <div class="control-sidebar-bg"></div>
 </div>
-<!-- Scripts -->
-<script src="{{ asset('js/app.js') }}"></script>
-<script src="{{ asset('js/travesuras.js') }}"></script>
-<!-- <script src="{{ asset('') }}js/vendor/jquery-1.11.2.min.js"></script>-->
-<script src="{{ asset('') }}js/vendor/bootstrap.min.js"></script>
-<script src="{{ asset('') }}js/vendor/isotope.min.js"></script>
+<!-- ./wrapper -->
 
-<script src="{{ asset('') }}js/jquery.easypiechart.min.js"></script>
-<script src="{{ asset('') }}js/jquery.mixitup.min.js"></script>
-
-
-<script src="{{ asset('') }}js/plugins.js"></script>
-<script src="{{ asset('') }}js/main.js"></script>
-<!--   Core JS Files   -->
-<script src="{{ asset('') }}js/core/jquery.3.2.1.min.js" type="text/javascript"></script>
-<script src="{{ asset('') }}js/core/popper.min.js" type="text/javascript"></script>
-<script src="{{ asset('') }}js/core/bootstrap.min.js" type="text/javascript"></script>
-<!--  Plugin for Switches, full documentation here: http://www.jque.re/plugins/version3/bootstrap.switch/ -->
-<script src="{{ asset('') }}js/plugins/bootstrap-switch.js"></script>
-<!--  Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
-<script src="{{ asset('') }}js/plugins/nouislider.min.js" type="text/javascript"></script>
-<!--  Plugin for the DatePicker, full documentation here: https://github.com/uxsolutions/bootstrap-datepicker -->
-<script src="{{ asset('') }}js/plugins/bootstrap-datepicker.js" type="text/javascript"></script>
-<!-- Control Center for Now Ui Kit: parallax effects, scripts for the example pages etc -->
-<script src="{{ asset('') }}js/now-ui-kit.js?v=1.1.0" type="text/javascript"></script>
-<script src="{{ asset('') }}js/login.js" type="text/javascript"></script>
+<!-- jQuery 3 -->
+<script src="{{ asset('') }}bower_components/jquery/dist/jquery.min.js"></script>
+<!-- jQuery UI 1.11.4 -->
+<script src="{{ asset('') }}bower_components/jquery-ui/jquery-ui.min.js"></script>
+<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+<script>
+    $.widget.bridge('uibutton', $.ui.button);
+</script>
+<!-- Bootstrap 3.3.7 -->
+<script src="{{ asset('') }}bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<!-- Morris.js charts -->
+<script src="{{ asset('') }}bower_components/raphael/raphael.min.js"></script>
+<script src="{{ asset('') }}bower_components/morris.js/morris.min.js"></script>
+<!-- Sparkline -->
+<script src="{{ asset('') }}bower_components/morris.js/morris.min.js"></script>
+<!-- Sparkline -->
+<script src="{{ asset('') }}bower_components/jquery-sparkline/dist/jquery.sparkline.min.js"></script>
+<!-- jvectormap -->
+<script src="{{ asset('') }}plugins/jvectormap/jquery-jvectormap-1.2.2.min.js"></script>
+<script src="{{ asset('') }}plugins/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
+<!-- bower_components/jquery-sparkline/dist/jquery.sparkline.min.js"></script>
+<!-- jvectormap -->
+<script src="{{ asset('') }}plugins/jvectormap/jquery-jvectormap-1.2.2.min.js"></script>
+<script src="{{ asset('') }}plugins/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
+<!-- jQuery Knob Chart -->
+<script src="{{ asset('') }}bower_components/jquery-knob/dist/jquery.knob.min.js"></script>
+<!-- daterangepicker -->
+<script src="{{ asset('') }}bower_components/moment/min/moment.min.js"></script>
+<script src="{{ asset('') }}bower_components/bootstrap-daterangepicker/daterangepicker.js"></script>
+<!-- datepicker -->
+<script src="{{ asset('') }}bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
+<!-- Bootstrap WYSIHTML5 -->
+<script src="{{ asset('') }}plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js"></script>
+<!-- Slimscroll -->
+<script src="{{ asset('') }}bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+<!-- FastClick -->
+<script src="{{ asset('') }}bower_components/fastclick/lib/fastclick.js"></script>
+<!-- AdminLTE App -->
+<script src="{{ asset('') }}dist/js/adminlte.min.js"></script>
+<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+<script src="{{ asset('') }}dist/js/pages/dashboard.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="{{ asset('') }}dist/js/demo.js"></script>
 </body>
-</html>>
+</html>

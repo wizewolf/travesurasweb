@@ -18,7 +18,7 @@ class CreateUserTable extends Migration
             $table->string('user_name');
             $table->string('email')->unique();
             $table->string('password', 60);
-            $table->text('last_session');
+            $table->text('last_session')->nullable();
             $table->enum('user_type',['administrador','cliente','empleado']);
 
             $table->softDeletes();

@@ -8,6 +8,6 @@ use Illuminate\Support\Facades\View;
 class GestionIndex extends Controller
 {
     public function index(){
-        return View::make('gestionindex');
+        return View::make('subirimagen');
     }
 }

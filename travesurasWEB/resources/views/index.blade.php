@@ -76,6 +76,7 @@
 												<li><a href="/login">Ingresar</a></li>
 												<li><a href="/register">Registrar</a></li>
 											@else
+												<li><a href="/gestionIndex">Ir a gestion</a></li>
 												<li><a href="/cerrar-sesion">Salir</a></li>
 											@endif
 
