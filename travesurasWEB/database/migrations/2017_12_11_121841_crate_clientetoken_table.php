@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CrateFotosTable extends Migration
+class CrateClientetokenTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,18 +13,17 @@ class CrateFotosTable extends Migration
      */
     public function up()
     {
-        Schema::create('fotos', function (Blueprint $table) {
+        Schema::create('clientetoken', function (Blueprint $table) {
             $table->increments('id');
 
             $table->integer('id_usuario')->unsigned();
-            $table->string('title');
-            $table->string('image');
+            $table->string('token');
             $table->foreign('id_usuario')->references('id')->on('clientes');
+
             $table->softDeletes();
             $table->rememberToken();
             $table->timestamps();
         });
-
     }
 
     /**

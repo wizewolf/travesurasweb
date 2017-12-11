@@ -90,7 +90,7 @@
             <!-- sidebar menu: : style can be found in sidebar.less -->
             <ul class="sidebar-menu" data-widget="tree">
                 <li class="header">Panel</li>
-                <li><a href="https://adminlte.io/docs"><i class="fa fa-book"></i> <span>Subir Foto</span></a></li>
+                <li><a href="/buscarcliente"><i class="fa fa-book"></i> <span>Subir Foto</span></a></li>
                 <li><a href="https://adminlte.io/docs"><i class="fa fa-book"></i> <span>Descargar Foto</span></a></li>
             </ul>
         </section>

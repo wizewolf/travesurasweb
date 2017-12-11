@@ -28,3 +28,10 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 //gestion
 Route::get('/gestionIndex', 'GestionIndex@index')->name('gestionIndex');
+Route::get('/buscarcliente', 'GestionIndex@buscarCliente')->name('buscarcliente');
+Route::post('/cliente', 'GestionIndex@cliente')->name('cliente');
+
+//galeria
+Route::get('image-gallery', 'ImageGalleryController@index');
+Route::post('image-gallery', 'ImageGalleryController@upload');
+Route::delete('image-gallery/{id}', 'ImageGalleryController@destroy');
