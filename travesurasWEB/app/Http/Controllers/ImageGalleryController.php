@@ -34,7 +34,6 @@ class ImageGalleryController extends Controller
 
         $input['image'] = time().'.'.$request->image->getClientOriginalExtension();
         $request->image->move(public_path('images'), $input['image']);
-
         $input['title'] = $request->title;
         $input['id_usuario'] = $request->iduser;
 

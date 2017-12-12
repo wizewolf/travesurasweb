@@ -165,6 +165,7 @@ return [
         Illuminate\View\ViewServiceProvider::class,
         JildertMiedema\LaravelPlupload\LaravelPluploadServiceProvider::class,
         Chumper\Zipper\ZipperServiceProvider::class,
+        ZanySoft\Zip\ZipServiceProvider::class,
         /*
          * Package Service Providers...
          */
@@ -228,6 +229,7 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
         'Plupload' => JildertMiedema\LaravelPlupload\Facades\Plupload::class,
         'Zipper' => Chumper\Zipper\Zipper::class,
+        'Zip' => ZanySoft\Zip\ZipFacade::class,
 
     ],
 
