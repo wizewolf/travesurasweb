@@ -36,7 +36,7 @@ class ImageGalleryController extends Controller
         $request->image->move(public_path('images'), $input['image']);
 
         $input['title'] = $request->title;
-        $input['id_user'] = $request->iduser;
+        $input['id_usuario'] = $request->iduser;
 
         ImageGallery::create($input);
 

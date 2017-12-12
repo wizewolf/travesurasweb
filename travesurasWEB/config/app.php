@@ -164,7 +164,7 @@ return [
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
         JildertMiedema\LaravelPlupload\LaravelPluploadServiceProvider::class,
-
+        Chumper\Zipper\ZipperServiceProvider::class,
         /*
          * Package Service Providers...
          */
@@ -227,6 +227,7 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
         'Plupload' => JildertMiedema\LaravelPlupload\Facades\Plupload::class,
+        'Zipper' => Chumper\Zipper\Zipper::class,
 
     ],
 

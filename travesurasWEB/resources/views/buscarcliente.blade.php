@@ -13,18 +13,14 @@
                         </div>
                         <!-- /.box-header -->
                         <!-- form start -->
-
-
-                        <form role="form" method="post" action="/cliente">
-                            {{cd}}
                             <div class="box-body">
                                 <label for="exampleInputEmail1">DNI del cliente</label>
-                                <input type="number" class="form-control" id="exampleInputEmail1" placeholder="Ingrese el dni del cliente">
+                                <input id="dni" type="number" class="form-control" id="exampleInputEmail1" placeholder="Ingrese el dni del cliente">
                             </div>
                             <div class="box-footer">
-                                <button type="submit" class="btn btn-primary">Submit</button>
+                                <button id="btnbuscar" class="btn btn-primary">Buscar</button>
                             </div>
-                        </form>
+
                     </div>
                 </div>
             </div>
@@ -32,4 +28,7 @@
         </section>
     </div>
     <!-- /.content-wrapper -->
+@endsection
+@section('script')
+    <script src="{{ asset('') }}js/cliente.js"></script>
 @endsection

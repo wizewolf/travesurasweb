@@ -22,16 +22,16 @@ Route::put('setEditUser', ['middleware' => 'auth','before' => 'auth', 'as' => 's
 //
 Route::get('/',['as'=>'travesurashome','uses'=>'TravesurasController@main']);
 
-
-Route::get('/login1',['as'=>'loginTravesuras','uses'=>'TravesurasController@login']);
 Route::get('/home', 'HomeController@index')->name('home');
 
 //gestion
-Route::get('/gestionIndex', 'GestionIndex@index')->name('gestionIndex');
-Route::get('/buscarcliente', 'GestionIndex@buscarCliente')->name('buscarcliente');
-Route::post('/cliente', 'GestionIndex@cliente')->name('cliente');
+Route::get('/gestionIndex', ['middleware' => 'auth','uses'=>'GestionIndex@index','as'=>'gestionIndex']);
+Route::get('/buscarcliente',[ 'middleware' => 'auth','uses'=>'GestionIndex@buscarCliente','as'=>'buscarcliente']);
+Route::post('/cliente', [ 'middleware' => 'auth','uses'=>'GestionIndex@cliente','as'=>'cliente']);
+Route::get('/cliente/fotos/{id}', [ 'middleware' => 'auth','uses'=>'GestionIndex@clientegaleria','as'=>'clientefotos']);
+Route::get('/descargarfotos', [ 'middleware' => 'auth','uses'=>'GestionIndex@descargarfoto','as'=>'clientefotos']);
 
 //galeria
-Route::get('image-gallery', 'ImageGalleryController@index');
-Route::post('image-gallery', 'ImageGalleryController@upload');
-Route::delete('image-gallery/{id}', 'ImageGalleryController@destroy');
+Route::get('image-gallery', [ 'middleware' => 'auth','uses'=>'ImageGalleryController@index','as'=>'image-gallery']);
+Route::post('image-gallery', [ 'middleware' => 'auth','uses'=>'ImageGalleryController@upload','as'=>'guardarfoto']);
+Route::delete('image-gallery/{id}', [ 'middleware' => 'auth','uses'=>'ImageGalleryController@destroy','as'=>'borrarfoto']);

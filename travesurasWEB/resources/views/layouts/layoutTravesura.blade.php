@@ -34,8 +34,10 @@
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
 
+    <![endif]-->
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <!-- Google Font -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
 </head>
@@ -90,8 +92,10 @@
             <!-- sidebar menu: : style can be found in sidebar.less -->
             <ul class="sidebar-menu" data-widget="tree">
                 <li class="header">Panel</li>
+                @if(\Illuminate\Support\Facades\Auth::user()->user_type == "administrador")
                 <li><a href="/buscarcliente"><i class="fa fa-book"></i> <span>Subir Foto</span></a></li>
-                <li><a href="https://adminlte.io/docs"><i class="fa fa-book"></i> <span>Descargar Foto</span></a></li>
+                @endif
+                <li><a href="/descargarfotos"><i class="fa fa-book"></i> <span>Descargar Foto</span></a></li>
             </ul>
         </section>
         <!-- /.sidebar -->
@@ -343,5 +347,6 @@
 <script src="{{ asset('') }}dist/js/pages/dashboard.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="{{ asset('') }}dist/js/demo.js"></script>
+@yield('script')
 </body>
 </html>

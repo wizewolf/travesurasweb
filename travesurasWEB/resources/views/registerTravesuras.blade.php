@@ -60,6 +60,12 @@
                         </div>
                         <div class="input-group form-group-no-border">
                                         <span class="input-group-addon">
+                                            <i class="now-ui-icons ui-1_email-85"></i>
+                                        </span>
+                            <input id="dni" type="number" class="form-control" placeholder="DNI...">
+                        </div>
+                        <div class="input-group form-group-no-border">
+                                        <span class="input-group-addon">
                                             <i class="now-ui-icons ui-1_lock-circle-open"></i>
                                         </span>
                             <input id="pass" type="password" class="form-control" placeholder="Contraseña...">

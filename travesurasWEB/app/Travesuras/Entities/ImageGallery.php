@@ -12,7 +12,6 @@ class ImageGallery extends Model
     protected $fillable = [
         'id_usuario',
         'title',
-        'image',
-        'id_usuario'];
+        'image'];
 }
 //http://itsolutionstuff.com/post/laravel-5-image-gallery-crud-example-from-scratchexample.html

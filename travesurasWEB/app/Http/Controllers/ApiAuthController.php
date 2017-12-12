@@ -54,6 +54,7 @@ class ApiAuthController extends Controller{
         $user = $this->authRepo->newUser();
         $user->user_name = Input::all()['user_name'];
         $user->email = Input::all()['email'];
+        $user->dni = Input::all()['dni'];
         $user->user_type = Input::all()['user_type'];
         $user->password = bcrypt(Input::all()['password']);
         $user->save();
@@ -65,6 +66,7 @@ class ApiAuthController extends Controller{
         $user = User::find(Input::all()['user_id']);
         $user->user_name = Input::all()['user_name'];
         $user->email = Input::all()['email'];
+        $user->dni = Input::all()['dni'];
         $user->user_type = Input::all()['user_type'];
         $user->password = bcrypt(Input::all()['passwordNew']);
         $user->save();

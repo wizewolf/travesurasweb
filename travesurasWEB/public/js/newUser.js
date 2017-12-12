@@ -4,6 +4,7 @@ var token = $('meta[name="csrf-token"]').attr('content');
 $('.register').on('click',function () {
     var nombre = $('#nombre').val();
     var mail = $('#mail').val();
+    var dni =$('#dni').val();
     var pass = $('#pass').val();
     var repass = $('#repass').val();
 
@@ -15,30 +16,36 @@ $('.register').on('click',function () {
                         if(pass != repass){
                             alert('Las contraseñas no coinciden');
                         }else{
-                            $.ajax({
-                                url: url + '/register',
-                                type: 'post',
-                                data: {
-                                    user_name: nombre,
-                                    email: mail,
-                                    password: pass,
-                                    user_type: "cliente",
-                                    _token: token
-                                },
-                                success: function (data){
-                                    //Controlar si es 400 => lanza una noptificacion de error
-                                    //si es 200 lanzar la notificacion q esta debajo
+                            if(dni.length ==8){
+                                $.ajax({
+                                    url: url + '/register',
+                                    type: 'post',
+                                    data: {
+                                        user_name: nombre,
+                                        email: mail,
+                                        dni:dni,
+                                        password: pass,
+                                        user_type: "cliente",
+                                        _token: token
+                                    },
+                                    success: function (data){
+                                        //Controlar si es 400 => lanza una noptificacion de error
+                                        //si es 200 lanzar la notificacion q esta debajo
 
-                                    if(data!=null){
-                                        alert("Se creo su Usuario");
-                                        setTimeout(function(){
-                                            window.location.href = url + '/login';
-                                        }, 1500);
-                                    }else if(data==null){
-                                        alert("No se pudo crear su Usuario");
+                                        if(data!=null){
+                                            alert("Se creo su Usuario");
+                                            setTimeout(function(){
+                                                window.location.href = url + '/login';
+                                            }, 1500);
+                                        }else if(data==null){
+                                            alert("No se pudo crear su Usuario");
+                                        }
                                     }
-                                }
-                            });
+                                });
+                            }else{
+                                alert("Ingrese un DNI valido");
+                            }
+
                         }
 
                     }else{
