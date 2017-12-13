@@ -32,9 +32,22 @@ Route::get('/cliente/fotos/{id}', [ 'middleware' => 'auth','uses'=>'GestionIndex
 Route::get('/descargarfotos', [ 'middleware' => 'auth','uses'=>'GestionIndex@descargarfoto','as'=>'clientefotos']);
 Route::post('/comprobarcodigo', [ 'middleware' => 'auth','uses'=>'GestionIndex@comprobarcodigo','as'=>'comprobarcodigo']);
 Route::get('/mostrarfotos', [ 'middleware' => 'auth','uses'=>'GestionIndex@mostrarfotos','as'=>'mostrarfotos']);
-Route::get('/descarZip', [ 'middleware' => 'auth','uses'=>'GestionIndex@descargarZip','as'=>'descargarZip']);
 
 //galeria
 Route::get('image-gallery', [ 'middleware' => 'auth','uses'=>'ImageGalleryController@index','as'=>'image-gallery']);
 Route::post('image-gallery', [ 'middleware' => 'auth','uses'=>'ImageGalleryController@upload','as'=>'guardarfoto']);
 Route::delete('image-gallery/{id}', [ 'middleware' => 'auth','uses'=>'ImageGalleryController@destroy','as'=>'borrarfoto']);
+
+//mobil
+Route::get('/mobile', [ 'uses'=>'GestionIndexMobil@indexmobil','as'=>'indexmobil']);
+Route::get('/mobile/descarcogigo', [ 'uses'=>'GestionIndexMobil@indexmobilIngresar','as'=>'indexmobil']);
+Route::post('/mobile/comprobarcodigo', ['uses'=>'GestionIndexMobil@comprobarcodigomobile','as'=>'comprobarcodigomobile']);
+Route::get('/mobile/mostrarfotos', ['uses'=>'GestionIndexMobil@mostrarfotosMobile','as'=>'mostrarfotosMobile']);
+//login
+Route::get('loginMobil', ['uses' => 'ApiAuthControllerMobil@index', 'as' => 'loginMobil']);
+Route::post('loginMobil', ['uses' => 'ApiAuthControllerMobil@store', 'as' => 'login_storeMobil']);
+Route::get('registerMobil', ['uses' => 'ApiAuthControllerMobil@getRegister', 'as' => 'getRegisterMobil']);
+Route::post('registerMobil', ['uses' => 'ApiAuthControllerMobil@setRegister', 'as' => 'register_setMobil']);
+Route::get('/mobile/usuariosMobil', ['middleware' => 'auth', 'uses' => 'ApiAuthControllerMobil@usuarios', 'as' => 'usuariosMobil']);
+Route::get('/mobile/cerrar-sesionMobil', ['middleware' => 'auth','uses' => 'ApiAuthControllerMobil@logout', 'as' => 'logoutMobil']);
+

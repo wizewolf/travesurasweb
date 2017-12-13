@@ -15,7 +15,7 @@ use App\Travesuras\Repositories\ClienteTokenRepo;
 use App\Travesuras\Repositories\imagenGalleryRepo;
 use Zip;
 use ZanySoft\Zip\ZipManager;
-class GestionIndex extends Controller
+class GestionIndexMobil extends Controller
 {
     protected $clienteRepo;
     protected $imageGallery;
@@ -29,32 +29,11 @@ class GestionIndex extends Controller
         $this->clientetokenrepo=$clienteToken;
     }
 
-    public function index(){
-        return View::make('indexgestio');
-    }
-    public function buscarCliente(){
-        return View::make('buscarcliente');
-    }
-    public function cliente(){
-        $data = (object) Input::all();
-        $client = $this->clienteRepo->buscarclienteDni($data->dni);
-        $clienteID = $client->id;
-        return $clienteID;
+    public function indexmobil(){
+        return View::make('loginMobile');
     }
 
-    public function clientegaleria($id)
-    {
-
-        $client = $this->clienteRepo->buscarclienteID($id);
-        $images = $this->imageGallery->fotosdelCliente($id);
-        return View::make('subirfotos',compact('client','images'));
-    }
-
-    public function descargarfoto(){
-        return View::make('descargarfotos');
-    }
-
-    public function comprobarcodigo(){
+    public function comprobarcodigomobile(){
         try{
             $data = (object)Input::all();
             $user = Auth::user()->dni;
@@ -71,25 +50,13 @@ class GestionIndex extends Controller
         }
     }
 
-    public function mostrarfotos(){
+    public function mostrarfotosMobile(){
         $client = $this->clienteRepo->buscarclienteDni(Auth::user()->dni);
         $images = $this->imageGallery->fotosdelCliente($client->id);
         return View::make('mostrarfotos',compact('images'));
     }
+    public function indexmobilIngresar(){
+        return View::make('descargarfotosMobile');
+    }
 
-//https://github.com/Chumper/Zipper
-    /*public function descargarZip(){
-        $user = Auth::user();
-        $client = $this->clienteRepo->buscarclienteDni($user->dni);
-        $images = $this->imageGallery->fotosdelCliente($client->id);
-        $imgZip = [];
-        $manager = new ZipManager();
-        $manager ->addZip( Zip::create(Storage::disk('public')->url($user->dni.'.zip')));
-        $zip = Zip::create('file.zip');
-        foreach ($images as $imagen){
-            $zip->add(Storage::disk('publicIMG')->url($imagen->image));
-        }
-        $zip->close();
-        $zip->donwload('zip');
-    }*/
 }

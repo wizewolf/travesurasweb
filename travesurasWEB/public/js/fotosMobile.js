@@ -7,7 +7,7 @@ $('#btnMostra').on('click',function(){
     var codigo = $('#codigo').val();
     console.log('entreo');
         $.ajax({
-            url: url + '/comprobarcodigo',
+            url: url + '/mobile/comprobarcodigo',
             type: 'post',
             data: {
                 codigo: codigo,
@@ -17,7 +17,7 @@ $('#btnMostra').on('click',function(){
                 if(data=="200"){
                     alert("Codigo correcto");
                     setTimeout(function(){
-                        window.location.href = url + '/mostrarfotos';
+                        window.location.href = url + '/mobile/mostrarfotos';
                     }, 1500);
 
                 }else if(data=="400"){

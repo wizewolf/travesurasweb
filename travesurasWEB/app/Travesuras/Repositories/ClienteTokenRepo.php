@@ -13,5 +13,6 @@ class ClienteTokenRepo
 {
     public function obtenertoken($id){
         return ClienteToken::where('id_usuario',$id)->first();
+
     }
 }
