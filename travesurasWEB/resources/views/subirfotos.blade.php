@@ -4,7 +4,7 @@
         <section class="content">
             <div class="row">
                 <!-- left column -->
-                <div class="col-md-12">
+                <div class="col-xs-10 col-sm-10 col-lg-10">
                     <!-- general form elements -->
                     <div class="box box-primary">
                         <div class="box-header with-border">
@@ -34,11 +34,11 @@
                                 @endif
 
                                 <div class="row">
-                                    <div class="col-md-5">
+                                    <div class="col-md-4">
                                         <strong>Titulo:</strong>
                                         <input type="text" name="title" class="form-control" placeholder="Title">
                                     </div>
-                                    <div class="col-md-5">
+                                    <div class="col-md-4">
                                         <strong>Foto:</strong>
                                         <input type="file" name="image" class="form-control">
                                     </div>
@@ -49,7 +49,7 @@
                                 </div>
                                 <input type="hidden" name="iduser" value="{{$client->id}}">
                             </form>
-
+                            <br>
                             <div class="row">
                                 <div class='list-group gallery'>
 

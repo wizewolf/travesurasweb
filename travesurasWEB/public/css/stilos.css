@@ -41,7 +41,10 @@ a.boton:hover{
     border-radius: 10px;
     border-color: #008d4c;
     border: #008d4c;
-}
+}/*
 .skin-blue .main-header li.user-header {
     background-color: white;
+}*/
+.container {
+    padding-bottom: 1%;
 }

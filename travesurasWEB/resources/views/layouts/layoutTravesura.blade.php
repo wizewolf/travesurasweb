@@ -47,7 +47,7 @@
 
     <header class="main-header">
         <!-- Logo -->
-        <a href="/" class="logo">
+        <a href="index2.html" class="logo">
             <!-- mini logo for sidebar mini 50x50 pixels -->
             <span class="logo-mini"><b>T</b>b</span>
             <!-- logo for regular state and mobile devices -->
@@ -60,16 +60,19 @@
                   <!-- User Account: style can be found in dropdown.less -->
                     <li class="dropdown user user-menu">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                           <span class="hidden-xs"> {{\Illuminate\Support\Facades\Auth::user()->user_name}}</span>
-                        </a>
+                            <i class="fa fa-bars" aria-hidden="true"></i>
+                        </a>                        </a>
 
                         <ul class="dropdown-menu">
                             <!-- User image -->
                             <li class="user-header">
                                {{-- <img src="http://www.fiestasmix.com/c/926-sub-category/globos-de-colores.jpg">--}}
                                 <p>
-                                    <a href="/" class="boton">volver</a>
+                                    {{\Illuminate\Support\Facades\Auth::user()->user_name}}
                                 </p>
+                            </li>
+                            <li>
+
                             </li>
                             <li class="user-footer">
                                 <div class="pull-right">
