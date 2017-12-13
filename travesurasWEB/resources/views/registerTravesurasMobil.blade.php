@@ -41,7 +41,7 @@
             <div class="card card-login card-plain">
                 <form class="form" method="" action="">
                     <div class="header text-center">
-                        <h4 class="title title-up">Crear Cuenta</h4>
+                        <h4 class="title title-up">Crear un cuenta</h4>
                     </div>
 
 

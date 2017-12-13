@@ -68,13 +68,13 @@
 
                                         <ul class="nav navbar-nav">
                                             <li><a href="#inicio" data-scroll-nav='1'>Inicio</a></li>
-                                            <li><a href="#queofrecemos" data-scroll-nav='2'>Â¿Que ofrecemos?</a></li>
-                                            <li><a href="#nuestrotrabajo" data-scroll-nav='3'>Nuestro trabajos</a></li>
+                                            <li><a href="#queofrecemos" data-scroll-nav='2'>¿Qué ofrecemos?</a></li>
+                                            <li><a href="#nuestrotrabajo" data-scroll-nav='3'>Nuestros trabajos</a></li>
                                             <li><a href="#combos" data-scroll-nav='4'>Combos</a></li>
                                     		<li><a href="#contactos" data-scroll-nav='5'>Contactos</a></li>
 											@if(\Illuminate\Support\Facades\Auth::guest())
 												<li><a href="/login">Ingresar</a></li>
-												<li><a href="/register">Registrar</a></li>
+												<li><a href="/register">Registrarse</a></li>
 											@else
 												@if(\Illuminate\Support\Facades\Auth::user()->user_type == "administrador")
 													<li><a href="/buscarcliente">Subir Fotos</a></li>
@@ -117,14 +117,14 @@
 						<div class="carousel-inner" role="listbox">
 							<div class="item active">
 								{{-- <div class="carousel-caption">
-									<p>Disponemos de un salon amplio</p>
+									<p>Disponemos de un amplio salón</p>
 									
 								</div>--}}
 								<img src="{{ asset('') }}images/img1.jpg" alt="...">
 							</div>
 							<div class="item">
 								{{--<div class="carousel-caption">
-									<p>Poseemos muchos temas para fiestas</p>
+									<p>Disponemos de muchos motivos para sus fiestas</p>
 									
 								</div>--}}
 								<img src="{{ asset('') }}images/img2.jpg" alt="...">
@@ -164,7 +164,7 @@
                 <div class="row">
 					<div class="col-md-6 col-sm-6 col-xs-12">
 						<div class="head_title text-center wow fadeInLeft"  data-wow-duration="3s">
-							<h2>Â¿Que ofrecemos?</h2>
+							<h2>¿Qué ofrecemos?</h2>
 							<div class="separator"></div>
 						</div>
 					</div>
@@ -182,7 +182,7 @@
 									<img src="{{ asset('') }}images/globos1.png" alt="" />
 								</div>
 								<h3 class="titulo">Fiesta</h3>
-								<p class="info">Ofrecemos una amplia gama de temas para festejar la fiesta soÃ±ada de su hijo ya sea pelotero y servicio de caterin. </p>
+								<p class="info">Ofrecemos una amplia gama de motivos para festejar la fiesta soÃ±ada de tu hijo ya sea pelotero y servicio de catering. </p>
 							</div>
 						</div>
 
@@ -202,7 +202,7 @@
 									<img src="{{ asset('') }}images/video.png" alt="" />
 								</div>
 								<h3 class="titulo">Servicio de video</h3>
-								<p class="info">Si usted lo desea tenemos un servicio de video para no perder ningun momento de ese dia. </p>
+								<p class="info">Si usted lo desea tenemos un servicio de video para no perder ningún momento de ese dia. </p>
 							</div>
 						</div>
                     </div>
@@ -215,7 +215,7 @@
                 <div class="row">
 					<div class="col-md-12 col-sm-12 col-xs-12">
 						<div class="head_title text-center wow fadeInLeft"  data-wow-duration="2s">
-							<h2>Nuestro trabajos</h2>
+							<h2>Nuestros trabajos</h2>
 							<div class="separator"></div>
 						</div>
 					</div>
@@ -246,7 +246,7 @@
 				</div>
 
 				<div class="btn_bg wow fadeInLeft"  data-wow-duration="3s">
-					<a href="" class="btn"> Mas fotos</a>
+					<a href="" class="btn"> Más fotos</a>
 				</div>
 			</div>
         </section><!-- End of Features Section -->
@@ -264,7 +264,7 @@
 					</div>
 					<div class="col-md-6 col-sm-6 col-xs-12 wow fadeInRight"  data-wow-duration="2s">
 						<div class="head_title_rigth">
-							<p class="esp">Contamos con estos combos para ofrecerte.</p>
+							<p class="esp">Contamos con los siguientes combos para ofrecerte.</p>
 						</div>
 					</div>
                     <div class="col-md-12 col-sm-12 col-xs-12 main_about_content text-center">
@@ -301,11 +301,6 @@
                 </div>
             </div>
         </section><!-- End of Features Section -->
-
-
-
-
-
 
 
         <section id="contactos" class="contact contac_custon" data-scroll-index='5'>
@@ -362,8 +357,8 @@
 							<div class="single_copyirgth wow fadeInUp"  data-wow-duration="2s">
 								<ul class="navbar-right">
                                     <li><a href="#inicio" data-scroll-nav='1'>Inicio</a></li>
-                                    <li><a href="#queofrecemos" data-scroll-nav='2'>Â¿Que ofrecemos?</a></li>
-                                    <li><a href="#nuestrotrabajo" data-scroll-nav='3'>Nuestro trabajos</a></li>
+                                    <li><a href="#queofrecemos" data-scroll-nav='2'>¿Qué ofrecemos?</a></li>
+                                    <li><a href="#nuestrotrabajo" data-scroll-nav='3'>Nuestros trabajos</a></li>
                                     <li><a href="#combos" data-scroll-nav='4'>Combos</a></li>
                                     <li><a href="#contactos" data-scroll-nav='5'>Contactos</a></li>
 
@@ -375,14 +370,6 @@
 				</div>
             </div>
         </section><!-- End of contact With Map Section -->
-
-
-
-
-
-
-
-
 
         <!-- STRAT SCROLL TO TOP -->
 

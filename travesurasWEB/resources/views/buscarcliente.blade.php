@@ -15,7 +15,7 @@
                         <!-- form start -->
                             <div class="box-body">
                                 <label for="exampleInputEmail1">DNI del cliente</label>
-                                <input id="dni" type="number" class="form-control" id="exampleInputEmail1" placeholder="Ingrese el dni del cliente">
+                                <input id="dni" type="number" class="form-control" id="exampleInputEmail1" placeholder="Ingrese el DNI del cliente">
                             </div>
                             <div class="box-footer">
                                 <button id="btnbuscar" class="btn btn-primary">Buscar</button>

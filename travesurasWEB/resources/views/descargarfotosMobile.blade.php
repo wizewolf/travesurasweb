@@ -22,7 +22,7 @@
                                 <div class="row">
                                     <div class="col-md-5">
                                         <br>
-                                        <input type="text" id="codigo" class="form-control" placeholder="Ingrese el codigo que le llego en el correo">
+                                        <input type="text" id="codigo" class="form-control" placeholder="Ingrese el código que le llego por mail">
                                     </div>
                                     <div class="col-md-2">
                                         <br/>
