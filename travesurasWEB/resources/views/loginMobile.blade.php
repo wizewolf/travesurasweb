@@ -21,18 +21,7 @@
 </head>
 
 <body class="login-page sidebar-collapse">
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg bg-primary fixed-top navbar-transparent " color-on-scroll="400">
-        <div class="container">
-            <div class="collapse navbar-collapse justify-content-end" id="navigation" data-nav-image="{{ asset('') }}img/blurred-image-1.jpg">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="/mobil">Volver</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+
     <!-- End Navbar -->
     <div class="page-header" filter-color="orange">
         <div class="page-header-image" style="background-image:url({{ asset('') }}img/pelotero2.jpg)"></div>
