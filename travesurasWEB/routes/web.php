@@ -30,6 +30,8 @@ Route::get('/buscarcliente',[ 'middleware' => 'auth','uses'=>'GestionIndex@busca
 Route::post('/cliente', [ 'middleware' => 'auth','uses'=>'GestionIndex@cliente','as'=>'cliente']);
 Route::get('/cliente/fotos/{id}', [ 'middleware' => 'auth','uses'=>'GestionIndex@clientegaleria','as'=>'clientefotos']);
 Route::get('/descargarfotos', [ 'middleware' => 'auth','uses'=>'GestionIndex@descargarfoto','as'=>'clientefotos']);
+Route::post('/comprobarcodigo', [ 'middleware' => 'auth','uses'=>'GestionIndex@comprobarcodigo','as'=>'comprobarcodigo']);
+Route::get('/mostrarfotos', [ 'middleware' => 'auth','uses'=>'GestionIndex@mostrarfotos','as'=>'mostrarfotos']);
 Route::get('/descarZip', [ 'middleware' => 'auth','uses'=>'GestionIndex@descargarZip','as'=>'descargarZip']);
 
 //galeria

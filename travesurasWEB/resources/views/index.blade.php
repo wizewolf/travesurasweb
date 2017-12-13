@@ -76,7 +76,11 @@
 												<li><a href="/login">Ingresar</a></li>
 												<li><a href="/register">Registrar</a></li>
 											@else
-												<li><a href="/gestionIndex">Ir a gestion</a></li>
+												@if(\Illuminate\Support\Facades\Auth::user()->user_type == "administrador")
+													<li><a href="/buscarcliente">Subir Fotos</a></li>
+												@else
+													<li><a href="/descargarfotos">Descargar Fotos</a></li>
+												@endif
 												<li><a href="/cerrar-sesion">Salir</a></li>
 											@endif
 
@@ -389,6 +393,8 @@
        <!-- <script src="{{ asset('') }}js/vendor/jquery-1.11.2.min.js"></script>-->
         <script src="{{ asset('') }}js/vendor/bootstrap.min.js"></script>
         <script src="{{ asset('') }}js/vendor/isotope.min.js"></script>
+        <script src="{{ asset('') }}js/vendor/modernizr-2.8.3-respond-1.4.2.min.js "></script>
+
 
         <script src="{{ asset('') }}js/jquery.easypiechart.min.js"></script>
         <script src="{{ asset('') }}js/jquery.mixitup.min.js"></script>

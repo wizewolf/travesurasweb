@@ -552,7 +552,7 @@ input:-ms-input-placeholder {
 	border-radius:10px;
 	font-family: 'big_johnregular';
 	text-transform:uppercase;
-	font-size:18px;
+	font-size:15px;
     color:#777474;
 }
 
@@ -615,7 +615,7 @@ input:-ms-input-placeholder {
 	-webkit-transition: all 500ms ease-in-out 0s;
 	-moz-transition: all 500ms ease-in-out 0s;
 	-ms-transition: all 500ms ease-in-out 0s;
-	-0-transition: all 500ms ease-in-out 0s;
+	/*-0-transition: all 500ms ease-in-out 0s;*/
 	transition: all 500ms ease-in-out 0s;
 	width: 45px;
 }
@@ -645,7 +645,7 @@ input:-ms-input-placeholder {
 	-webkit-transition: all 500ms ease-in-out 0s;
 	-moz-transition: all 500ms ease-in-out 0s;
 	-ms-transition: all 500ms ease-in-out 0s;
-	-0-transition: all 500ms ease-in-out 0s;
+	/*-0-transition: all 500ms ease-in-out 0s;*/
 	transition: all 500ms ease-in-out 0s;
 	width: 45px;
 }

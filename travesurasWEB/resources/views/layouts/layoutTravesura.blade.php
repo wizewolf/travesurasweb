@@ -28,6 +28,7 @@
     <link rel="stylesheet" href="{{ asset('') }}bower_components/bootstrap-daterangepicker/daterangepicker.css">
     <!-- bootstrap wysihtml5 - text editor -->
     <link rel="stylesheet" href="{{ asset('') }}plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
+    <link rel="stylesheet" href="{{ asset('') }}css/stilos.css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -46,19 +47,14 @@
 
     <header class="main-header">
         <!-- Logo -->
-        <a href="index2.html" class="logo">
+        <a href="/" class="logo">
             <!-- mini logo for sidebar mini 50x50 pixels -->
             <span class="logo-mini"><b>T</b>b</span>
             <!-- logo for regular state and mobile devices -->
-            <span class="logo-lg"><b>Trabesuras </b>infantiles</span>
+            <span class="logo-lg"><b>Travesuras </b>infantiles</span>
         </a>
         <!-- Header Navbar: style can be found in header.less -->
         <nav class="navbar navbar-static-top">
-            <!-- Sidebar toggle button-->
-            <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
-                <span class="sr-only">Toggle navigation</span>
-            </a>
-
             <div class="navbar-custom-menu">
                 <ul class="nav navbar-nav">
                   <!-- User Account: style can be found in dropdown.less -->
@@ -66,11 +62,13 @@
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                            <span class="hidden-xs"> {{\Illuminate\Support\Facades\Auth::user()->user_name}}</span>
                         </a>
+
                         <ul class="dropdown-menu">
                             <!-- User image -->
                             <li class="user-header">
+                               {{-- <img src="http://www.fiestasmix.com/c/926-sub-category/globos-de-colores.jpg">--}}
                                 <p>
-                                    {{\Illuminate\Support\Facades\Auth::user()->user_name}}
+                                    <a href="/" class="boton">volver</a>
                                 </p>
                             </li>
                             <li class="user-footer">
@@ -85,28 +83,7 @@
             </div>
         </nav>
     </header>
-    <!-- Left side column. contains the logo and sidebar -->
-    <aside class="main-sidebar">
-        <!-- sidebar: style can be found in sidebar.less -->
-        <section class="sidebar">
-            <!-- sidebar menu: : style can be found in sidebar.less -->
-            <ul class="sidebar-menu" data-widget="tree">
-                <li class="header">Panel</li>
-                @if(\Illuminate\Support\Facades\Auth::user()->user_type == "administrador")
-                <li><a href="/buscarcliente"><i class="fa fa-book"></i> <span>Subir Foto</span></a></li>
-                @endif
-                <li><a href="/descargarfotos"><i class="fa fa-book"></i> <span>Descargar Foto</span></a></li>
-            </ul>
-        </section>
-        <!-- /.sidebar -->
-    </aside>
     @yield('content')
-    <footer class="main-footer">
-        <div class="pull-right hidden-xs">
-            <b>Version</b> 1.0
-        </div>
-        <strong>Copyright &copy; 2017 <a href="#">MPStudio</a>.</strong> Todos los derechos reservados.
-    </footer>
 
     <!-- Control Sidebar -->
     <aside class="control-sidebar control-sidebar-dark">
