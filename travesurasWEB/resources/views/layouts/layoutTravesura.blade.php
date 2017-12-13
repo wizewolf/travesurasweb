@@ -61,7 +61,7 @@
                     <li class="dropdown user user-menu">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                             <i class="fa fa-bars" aria-hidden="true"></i>
-                        </a>                        </a>
+                        </a>
 
                         <ul class="dropdown-menu">
                             <!-- User image -->
