@@ -66,7 +66,7 @@
                     </form>
                     <div class="pull-left">
                         <h6>
-                            <a href="/register" class="link crearCuenta">Crear Cuenta</a>
+                            <a href="/register" class="link crearCuenta">Crear una cuenta</a>
                         </h6>
                     </div>
                 </div>

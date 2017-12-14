@@ -8,7 +8,7 @@
                     <!-- general form elements -->
                     <div class="box box-primary">
                         <div class="box-header with-border">
-                            <h3 class="box-title">Ingrese el codigo</h3>
+                            <h3 class="box-title">Ingrese el código que le llego por mail</h3>
                         </div>
                         <div class="container">
                             <div id="buscar">

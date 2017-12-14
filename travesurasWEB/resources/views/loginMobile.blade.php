@@ -55,7 +55,7 @@
                     </form>
                     <div class="pull-left">
                         <h6>
-                            <a href="/registerMobil" class="link crearCuenta">Crear Cuenta</a>
+                            <a href="/registerMobil" class="link crearCuenta">Crear una cuenta</a>
                         </h6>
                     </div>
                 </div>

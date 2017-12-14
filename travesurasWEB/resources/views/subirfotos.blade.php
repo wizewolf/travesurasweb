@@ -8,7 +8,7 @@
                     <!-- general form elements -->
                     <div class="box box-primary">
                         <div class="box-header with-border">
-                            <h3 class="box-title">Subir Fotos al cliente</h3>
+                            <h3 class="box-title">Subir Fotos del cliente</h3>
                         </div>
                         <div class="container">
                             <form action="{{ url('image-gallery') }}" class="form-image-upload" method="POST" enctype="multipart/form-data">
@@ -17,7 +17,7 @@
 
                                 @if (count($errors) > 0)
                                     <div class="alert alert-danger">
-                                        <strong>Cuidado!</strong> Debe rellenar todos los campos.<br><br>
+                                        <strong>Cuidado!</strong> Debe completar todos los campos.<br><br>
                                         <ul>
                                             @foreach ($errors->all() as $error)
                                                 <li>{{ $error }}</li>
