@@ -1,9 +1,9 @@
 .main_menu_bg.navbar-fixed-top.menu-scroll {
     margin-top: 0px;
-    background: #bde3f9;
+    background: DODGERBLUE;
 }
 section.cuerpo {
-    background: #d4e7ff;
+    background: #d4fff9;
 }
 h2{
     font-family: 'Boogaloo', cursive;

@@ -60,7 +60,7 @@
                         </div>
                         <div class="input-group form-group-no-border">
                                         <span class="input-group-addon">
-                                            <i class="now-ui-icons ui-1_email-85"></i>
+                                            <i class="now-ui-icons business_badge"></i>
                                         </span>
                             <input id="dni" type="number" class="form-control" placeholder="DNI...">
                         </div>

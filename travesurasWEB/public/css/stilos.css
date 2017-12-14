@@ -2,26 +2,26 @@
     padding-left: 20%;
 }
 .content-wrapper {
-    background: #d4e7ff;
+    background: #3cbc53;
 }
 
 .skin-blue .wrapper, .skin-blue .main-sidebar, .skin-blue .left-side {
-    background: #d4e7ff;
+    background: #3cbc53;
 }
 .skin-blue .main-header .navbar {
-    background-color: #96B9E3;
+    background-color: DODGERBLUE;
 }
 .skin-blue .main-header .logo {
-    background-color: #96B9E3;
+    background-color: DODGERBLUE;
 }
 .skin-blue .main-header .logo:hover {
-    background-color: #96B9E3;
+    background-color: DODGERBLUE;
 }
 span.logo-lg {
-    background-color: #96B9E3;
+    background-color: DODGERBLUE;
 }
 .skin-blue .main-header .navbar {
-    background-color: #96B9E3;
+    background-color: DODGERBLUE;
 }
 div#buscar {
     padding-bottom: 1%;

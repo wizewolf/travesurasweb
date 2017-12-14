@@ -189,7 +189,7 @@ p:last-child {
     /*font-family: 'roboto', sans-serif;*/
 }
 .home-carucel{
-    background: #35478C;
+    background: #3cbc53;
 }
 .text {
     color: #333333;
@@ -521,7 +521,7 @@ input:-ms-input-placeholder {
 
 .main_menu_bg{
 	margin-top:0px;
-    background: #B6DAFA;
+    background: DODGERBLUE;
 }
 .main_menu_bg .navbar-default {
     background-color: transparent; 
@@ -531,12 +531,12 @@ input:-ms-input-placeholder {
 }
 
 .main_menu_bg .navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:focus{
-	color:#1497fc;
+	color: white;
 	background-color:transparent;
 }
  
 .menu-scroll.main_menu_bg .navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:focus{
-	color:#1497fc;
+	color: white;
 	background-color:transparent;
 }
 
@@ -553,7 +553,7 @@ input:-ms-input-placeholder {
 	font-family: 'big_johnregular';
 	text-transform:uppercase;
 	font-size:15px;
-    color:#777474;
+    color:#efeded;
 }
 
 /*49.18 27*/
